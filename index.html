@@ -1,13 +1,4 @@
 <style>
-.demo-layout-transparent {
-  background: url('https://images.pexels.com/photos/1310035/pexels-photo-1310035.jpeg?auto=compress') center / cover;
-}
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white;
-}
 </style>
 
 <html>
@@ -19,29 +10,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-    <!-- Uses a transparent header that draws on top of the layout's background -->
-    <div class="mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title">Arturo Salazar</span>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">About</a>
-            <a class="mdl-navigation__link" href="">Gallery</a>
-            <a class="mdl-navigation__link" href="">Contact</a>
-          </nav>
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">Hacking</div>
-          <div class="mdl-cell mdl-cell--4-col">3d printing</div>
-          <div class="mdl-cell mdl-cell--4-col">swag</div>
-        </div>
-      </main>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Arturo Salazar</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">About</a>
+        <a class="mdl-navigation__link" href="">Gallery</a>
+        <a class="mdl-navigation__link" href="">Contact</a>
+      </nav>
     </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      
+    </div>
+  </main>
+</div>
   </body>
 </html>
